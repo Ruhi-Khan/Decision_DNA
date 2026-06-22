@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decision DNA History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hero">
+
+<h1>Decision History</h1>
+
+<div id="historyContainer"></div>
+
+</div>
+
+<script>
+
+let history =
+JSON.parse(localStorage.getItem("decisionDNA")) || [];
+
+let html = "";
+
+history.reverse().forEach(item => {
+
+html += `
+<div class="card">
+
+<h3>${item.match}</h3>
+
+<p><b>Incident:</b> ${item.incident}</p>
+
+<p><b>Decision:</b> ${item.decision}</p>
+
+<p><b>Confidence:</b> ${item.confidence}</p>
+
+<p><b>Date:</b> ${item.date}</p>
+
+</div>
+
+<br>
+
+`;
+
+});
+
+document.getElementById("historyContainer").innerHTML = html;
+
+</script>
+
+</body>
+</html>

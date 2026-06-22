@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision DNA AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            ⚽ Decision DNA AI
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">History</a>
+            <a href="#">About</a>
+            <a href="history.html">History</a>
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <h1>Understand WHY Football Decisions Happen</h1>
+
+        <p>
+            AI-powered referee and VAR decision explanation system
+            using FIFA rules and historical football incidents.
+        </p>
+
+        <button class="hero-btn">
+            Analyze Incident
+        </button>
+
+    </section>
+
+    <!-- Incident Form -->
+
+    <section class="incident-section">
+
+        <div class="card">
+
+            <h2>Analyze Football Incident</h2>
+
+            <input type="text"
+                id="matchName"
+                placeholder="Match Name">
+
+            <select id="incidentType">
+
+                <option>Penalty</option>
+                <option>Red Card</option>
+                <option>Offside</option>
+                <option>Handball</option>
+                <option>VAR Review</option>
+
+            </select>
+
+            <textarea
+                id="incidentText"
+                placeholder="Example: Defender pushed attacker inside penalty area causing him to fall.">
+            </textarea>
+
+            <button onclick="generateDecision()">
+                Generate Decision DNA
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Results -->
+
+    <section class="results-section">
+
+        <h2>Decision DNA Report</h2>
+
+        <div id="results">
+
+            <p>
+                Report will appear here after analysis.
+            </p>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>next
