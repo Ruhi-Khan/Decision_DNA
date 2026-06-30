@@ -1,0 +1,30 @@
+You are working on a full-stack project. Before doing anything, scan the entire repository structure to understand the codebase.
+
+## Step 1 — Reconnaissance (do this first, no exceptions)
+- Run `find . -type f | grep -v node_modules | grep -v .git | grep -v .next` to get a full file tree
+- Read `index.html` (or any HTML files in the root/frontend)
+- Read the Python backend files (look for main.py, app.py, server.py, requirements.txt, or any .py files)
+- Read the Next.js project files — check package.json, app/ or pages/ directory, and any existing components
+- Understand what this project actually does before writing a single line
+
+## Step 2 — Write README.md
+Based on what you discovered, write a clear README.md in the root that covers:
+- What the project does (1–2 sentence summary)
+- Project structure (original HTML frontend, Python backend, Next.js app)
+- How to run each part (commands for Python backend, Next.js dev server)
+- Tech stack
+- Any environment variables or setup steps you found
+
+## Step 3 — Build the Next.js UI
+- Study index.html carefully — extract the color palette, layout structure, purpose, and visual tone
+- Replicate the same look, feel, and functionality in the Next.js app using modern components
+- Use Tailwind CSS for styling (install it if not already set up)
+- Match the design intent of index.html — don't invent a new design language, extend the existing one
+- Make it clean, responsive, and production-ready
+- Wire up any API calls to the Python backend if you find fetch/axios calls in the original HTML
+
+## Rules
+- Do not skip the reconnaissance step
+- Do not assume what the project does — read the files first
+- Do not add placeholder lorem ipsum content — use real content from the existing HTML
+- Commit message if asked: "feat: add Next.js UI matching existing frontend + README"
